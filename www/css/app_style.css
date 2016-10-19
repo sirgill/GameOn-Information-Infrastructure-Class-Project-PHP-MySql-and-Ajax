@@ -1,0 +1,428 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 25, 2016, 2:14:01 PM
+    Author     : sunnygill
+*/
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#space {
+    height: 100%;
+    text-align: center;
+    background-image: url("http://static.giantbomb.com/uploads/original/0/4439/1326132-bomb.jpg")
+}
+
+body{
+    text-align: center;
+    //background-image: url("https://i.ytimg.com/vi/qbzFSfWwp-w/maxresdefault.jpg");
+}
+
+/*reset padding for p and hx tags*/
+p {
+    padding: 0 0 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0 0 0.4em;
+}
+
+hr {
+    margin-bottom: 3px;
+    background-color: #bbb;
+    color: #bbb;
+    height: 1px;
+    border: 0px;
+    clear: both;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 160px;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+    text-align:left; 
+    width:960px; 
+}
+
+
+/*styles for the page footer */
+#footer{
+    font-size: 80%;    
+    font-family: 'Times New Roman',Times,serif;
+    text-align: center;
+    background-color: whitesmoke;  
+}
+
+#footer, #push{
+    height: 4.8em;
+    clear: both;
+}
+
+/*sytle for the banner */
+#banner {
+    background-color: whitesmoke;
+    height: 160px;
+}
+
+#banner #left{
+    float: left;
+    overflow: hidden;
+    width: 530px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+#banner #right{
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*styles for the page header that appears right below the banner*/
+#main-header {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000066;
+    display: inline-block;
+}
+/*styles for the record numbers that appear to the right of the page header*/
+span.rcd-numbers {
+    color: #999;
+    font-size: 0.55em;
+    display: inline-block;
+    margin-top: 18px;
+    margin-left: 3px;
+}
+
+/* styles for grid */
+.grid-container{
+    margin: 10px auto 10px auto;
+    width: 960px; 
+    border: 1px solid #eee;
+    background-color: white; 
+}
+
+.row:before, 
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
+
+.col {
+    float: left; 
+    min-height: 1px; 
+    padding: 16px; 
+    background-color: #ffebeb;
+    border: 1px dotted #ffebeb;
+    text-align: center;
+}
+
+.col:hover {
+    border: 1px solid #ff6600;
+}
+
+.col > p {
+    background-color: #fff; 
+    padding: 0;
+    margin: 0;
+    text-align: left; 
+    color: #333;
+    width: 126px;
+    height: 260px;
+}
+
+.col > p img {
+    width: 126px;
+    height: 178px;
+    border: none;
+}
+
+.col > p a {
+    text-decoration: none;
+}
+
+.col >p span {
+    margin-top: 2px;
+    display: inline-block;
+    padding-left: 3px;
+    font-size: 0.7em;
+    font-family: cursive;
+    color: #555;
+}
+
+table#detail {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: solid 1px #bbb;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#detail img {
+    width: 220px;
+}
+
+#detail td {
+    position: relative;
+    vertical-align: top;
+    padding: 2px 12px 15px 0px;
+}
+
+#detail p {
+    padding: 3px;
+}
+
+#detail #button-group {
+    position: absolute;
+    bottom: 20px;
+}
+#detail #button-groups {
+    position: absolute;
+    bottom: 40px;
+    
+    
+    
+}
+
+#detail #confirm-message {
+    position: absolute;
+    bottom: 20px;
+    color: red;
+}
+
+#detail .media-description {
+    max-height: 120px;
+    overflow: auto;
+}
+
+/* style for the search bar */
+#searchbar {
+    float: right;
+    margin-top: 10px;
+    margin-right: 0px;
+    position: relative;
+    border: #bbb 1px solid;
+    border-radius: 0px;
+
+}
+
+#searchbar input{
+    border: none;
+}
+
+#searchbar input[type="text"] {
+    width: 155px;
+    padding-left: 8px;
+    font-size: 0.8em;
+    color: #444;
+}
+
+#searchbar input[type="text"]:focus {
+    outline: none;
+}
+
+#searchbar input[type="submit"]{
+    border-left: 1px solid #fff;
+    padding: 0;
+    width: 24px;
+    height: 19px;
+    text-align: center;
+    background-color: #eee;
+}
+
+#searchbar input[type="submit"]:hover{
+    border-left: 1px solid #999;
+    background-color: #c7f2fd;
+}
+
+/* styles for the suggestion div block and the spans in it*/
+#suggestionDiv {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    right: -1px;
+    background-color: #fff;
+    font-size: 0.85em;
+    z-index: 9999;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid rgba(0,0,0,.15);
+    box-shadow: 2px 10px 12px 2px rgba(0,0,0,.175);
+}
+
+#suggestionDiv span {
+    display: block;
+    padding: 4px 3px 4px 10px;
+    cursor: default;
+    min-width: 178px;
+    white-space: nowrap;
+}
+
+#suggestionDiv span:hover {
+    background-color: #F5DEB3;
+}
+
+/* styles for sorting select list */
+.sorting {
+    display: inline-block;
+    float: right;
+}
+
+.sorting select {
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* styles for panigation buttons */
+.pagination {
+    float: right;
+    margin-top: 0px;
+}
+
+.pagination select {
+    color: #666;
+}
+
+.pagination ul {
+    list-style-type: none;
+    margin-top: 0px;
+    padding: 0;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.pagination li {
+    display: inline-block;
+    border: 0px;
+    padding: 0px;
+    margin-left: 5px;
+
+}
+
+.pagination li a {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #999;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 1px;
+    width: 12px;
+    height: 14px;
+    border-radius: 2px;
+}
+
+.pagination li a.active {
+    background-color: #eee;
+}
+
+.pagination li a.enabled {
+    font-weight: bold;
+}
+
+.pagination li a.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: #bbb;
+}
+
+.pagination li a:hover,
+.pagination li a:active,
+.pagination li a:focus
+{
+    text-decoration: none;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+}
+
+//styles for new media form
+.new-media form{
+    /*width: 800px; border: 1px solid #bbb; margin-top: 10px; padding: 10px;*/
+}
+
+.new-media input[type="text"], .new-media textarea{
+    border: 1px solid #bbb;
+    color: #333;
+    border-radius: 2px;
+    font-size: 13px;
+    padding: 2px;
+    margin-top: 8px;
+}
+
+.new-media input:required:invalid, .new-media input:focus:invalid, textarea:required:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+}
+
+.new-media input:required:valid, .new-media textarea:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+
+/*styles for the thumbnails on the homepage */
+#thumbnails a {
+    text-decoration: none;
+}
+
+#thumbnails a:hover {
+    text-decoration: none;
+}
+
+#thumbnails img {
+    border: solid 3px #448C9A;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 1px;
+    width: 150px;
+
+    /*for Firefox */
+    -moz-border-radius: 10px;
+}
+
+#thumbnails img:hover {
+    border: solid 6px #393ECE;
+    margin: 2px
+}
+
+#userthumbnail a:hover {
+    text-decoration: none;
+   
+}
+#userthumbnail img {
+    border: solid 3px #448C9A;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 1px;
+    width: 90px;
+}
+#userthumbnail img:hover {
+    border:solid 6px red;
+    margin: 2px;
+}
