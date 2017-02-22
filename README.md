@@ -1,6 +1,5 @@
 # GameOn
-GameOn is a application that dispays games from different platforms which include PC,PS4, and Xbox One. Gaming platforms are divided into sections and include their own databases where the admin can add, update, and delete games. GameOn was a class project at 
-IUPUI Indianapolis. 
+GameOn is a application that dispays games from different platforms which include Board Games, Mobile Games, and Xbox One Games. Gaming platforms are divided into sections and include their own databases where the admin can add, update, and delete games. GameOn was a class project at IUPUI Indianapolis. 
 
 ## Built With
 
